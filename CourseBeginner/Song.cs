@@ -1,18 +1,18 @@
 ﻿using System;
 namespace CourseBeginner
 {
-    public class Song : IMedia
+    public class Song : Media
     {
         public long Seconds { get; set; }
 
-        public string Title { get; set; }
-
         public ShelvePosition Position { get; set; }
 
-
-        public void Play()
+        public override void Play()
         {
-            Console.WriteLine($"Playing {Title}");
+            Console.WriteLine("Increase volumen");
+            base.Play();
         }
+
     }
+
 }
